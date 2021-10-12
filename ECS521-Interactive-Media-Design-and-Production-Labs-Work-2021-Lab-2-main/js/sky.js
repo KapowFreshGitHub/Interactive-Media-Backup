@@ -10,7 +10,7 @@ window.addEventListener('load', function() {
 
 
     function drawCloud(startX, startY, alpha) {
-		
+
 	// IMPORTANT NOTE /////////////////////////////////////////////////////
 	// Once you finish working on task ToDo 1, comment your code and start working on
 	// task ToDo 2.i; in the same way, when you finish it, comment the code and start
@@ -23,8 +23,22 @@ window.addEventListener('load', function() {
 	//    ToDo 1: Modify these lines to answer the points i, ii and iii   //
 	// You can also modify the function signature (parameters), if needed //
 	///////////////////////////////////////////////////////////////////////
-	fg_ctx.globalAlpha = alpha;
-	fg_ctx.globalCompositeOperation = 'lighter';
+
+	// ToDo 1.i
+	//Tune this function for transparency (Try to make the clouds look real).
+	fg_ctx.globalAlpha = alpha/4;
+	fg_ctx.globalCompositeOperation = 'darker';
+
+	//ToDo 1.ii
+	//Change starting point of clouds.
+	startX = 20;
+	startY = 20;
+
+	//ToDo 1.iii
+
+
+	// fg_ctx.globalAlpha = alpha;
+	// fg_ctx.globalCompositeOperation = 'lighter';
 
 	fg_ctx.beginPath();
 	fg_ctx.moveTo(startX, startY);
@@ -41,7 +55,7 @@ window.addEventListener('load', function() {
 	//             ToDo 2.i: Custom cloud using bezierCurveTo            //
 	///////////////////////////////////////////////////////////////////////
 	// Add your code here
-
+	// 
 
 	///////////////////////////////////////////////////////////////////////
 	//           ToDo 2.ii: Custom could using quadraticCurveTo           //
